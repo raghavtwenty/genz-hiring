@@ -1,0 +1,13 @@
+Googleathon 2.0
+24 hours - Hackathon
+GDSC SNS 
+November 2023
+
+
+Problem Statement:
+
+Optimizing Job Application Processes through AI Assistance LLM based: (Resume Summary, Score Applicants based on JD)Description:
+
+In the realm of employment, there is a need for an AI-powered solution to optimize and enhance job application processes. The proposed system should guide job seekers through an efficient application workflow, utilize advanced document recognition for credential verification, and provide real-time updates on application progress. Security measures must be robust to safeguard personal and professional information, and the system should continually learn from user interactions and industry changes for continuous improvement.
+
+Domain: Communication and Growth system

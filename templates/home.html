@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/output_style.css" />
+    <title>{% block title %}GENZ HIRING{% endblock %}</title>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-content">
+        <h1><a href="{{ url_for('index') }}" class="h">GENZ HIRING</a></h1>
+      </div>
+      <ul style="list-style: none">
+        <li>
+          <a href="{{ url_for('overview') }}" class="sidetag">Overview</a>
+        </li>
+        <li>
+          <a href="{{ url_for('length') }}" class="sidetag">Resume Length </a>
+        </li>
+        <li>
+          <a href="{{ url_for('total') }}" class="sidetag"
+            >Total Bullet Points
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('bullet') }}" class="sidetag"
+            >Bullet Points length</a
+          >
+        </li>
+        <li>
+          <a href="{{ url_for('action') }}" class="sidetag">Action Verb </a>
+        </li>
+        <li>
+          <a href="{{ url_for('quanti') }}" class="sidetag">Quantification </a>
+        </li>
+        <li><a href="{{ url_for('skills') }}" class="sidetag">Skills</a></li>
+        <li>
+          <a href="{{ url_for('consis') }}" class="sidetag">Consistency</a>
+        </li>
+        <li>
+          <a href="{{ url_for('dates') }}" class="sidetag">Dates Ordering </a>
+        </li>
+        <li>
+          <a href="{{ url_for('spell') }}" class="sidetag">Spell Check</a>
+        </li>
+        <li><a href="{{ url_for('read') }}" class="sidetag">Readability</a></li>
+      </ul>
+    </div>
+
+    <div class="content" id="content">
+      {% block content %}
+      <div>
+        <h1>Your Resume is {{ appreciation }} Overall Score:{{score}}</h1>
+      </div>
+
+      <div class="cont">
+        <div class="container">
+          <h2>Summary</h2>
+          <ul style="list-style: none">
+            {% for point in left %}
+            <li>{{ point|replace('\n', '<br />')}}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="container">
+          <h2>Modifications</h2>
+          <ul style="list-style: none">
+            {% for point in right %}
+            <li>{{ point|replace('\n', '<br />') }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <div class="centered-container">
+        <button class="magic-button" onclick="showChangesContainer()">
+          Magic
+        </button>
+        <button class="magic-button" onclick="showJobSeekContainer()">
+          Job Seek
+        </button>
+      </div>
+
+      <div id="changes-container" class="container" style="display: none">
+        <h2>Your new Resume is ready</h2>
+        <ul style="list-style: none">
+          {% for point in magic %}
+          <li>{{ point|replace('\n', '<br />')}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div id="job-seeking-container" class="container" style="display: none">
+        <h2>Job Seeking</h2>
+
+        {% for job in jobSeek %}
+        <div class="job-card-container" id="job-{{ loop.index }}">
+          <li style="list-style: none">{{ job|replace('\n', '') }}</li>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endblock %}
+
+    <script src="../static/javascript/script.js"></script>
+  </body>
+</html>

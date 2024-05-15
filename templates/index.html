@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GenZ Hiring</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/home_style.css" />
+  </head>
+  <body>
+    <div id="cont_home">
+      <h1 id="title">GenZ Hiring</h1>
+      <form action="/result" method="POST" enctype="multipart/form-data">
+        <label class="home_text" id="lab_role">Job Role </label><br />
+        <input type="text" name="role" id="role" cols="50" /><br /><br />
+        <label class="home_text" id="lab_jobdesc">Job Description </label><br />
+        <textarea id="jobdesc" name="jobdesc" rows="5" cols="50"></textarea
+        ><br /><br />
+        <input
+          id="but_pdf_up"
+          type="file"
+          name="pdf_file"
+          accept="application/pdf"
+          value="Upload Resume"
+        /><br /><br />
+        <input type="submit" value="Next" id="but_home_next" />
+      </form>
+    </div>
+    <footer id="footer">
+      Team : BOIZ<br>
+      Designed & Developed by Farhaan, Muhilan, Naveen, Raghava<br>
+      GitHub: <a href="https://github.com/raghavtwenty" target="_blank" style="color: #00008B;">@raghavtwenty</a>
+        <br>
+        Date Created: November 20, 2023 | Last Updated: May 15, 2024
+        <br>
+        Version Info: 1.15052024 | Stable Release
+    </footer>
+  </body>
+</html>

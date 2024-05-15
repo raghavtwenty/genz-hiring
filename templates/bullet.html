@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+
+{% block title %}Bullet Points length{% endblock %}
+
+{% block content %}
+    <h1>Bullet Points length | Score: {{score}}/10</h1>
+        <div class="cont">
+            <div class="container">
+                <h2>Summary</h2>
+            <ul style="list-style: none;">
+                {% for point in left %}
+                    <li>{{ point|replace('\n', '<br>')}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="container">
+            <h2>Modifications</h2>
+            <ul style="list-style: none;">
+                {% for point in right %}
+                    <li>{{ point|replace('\n', '<br>') }}</li>
+                {% endfor %}
+            </ul>
+            </div>
+        </div>
+{% endblock %}

@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../images/bg.png');
+    background-size: cover;
+    background-position: center;
+    color: black;
+
+}
+
+#title {
+    color: black;
+}
+
+.home_text {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+#cont_home {
+    width: 420px;
+    background-color: transparent;
+    border: 2px solid black;
+    color: white;
+    text-align: center;
+    padding: 30px 40px;
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px black;
+    color: whitesmoke;
+}
+
+#cont_home:hover {
+    box-shadow: 10px 10px 10px orange;
+}
+
+#title {
+    text-align: center;
+}
+
+#role,
+#jobdesc {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 20px;
+    background: transparent;
+    font-size: 20px;
+}
+
+#but_pdf_up {
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+#but_home_next {
+    width: 100%;
+    border-radius: 20px;
+    background: black;
+    color: orange;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#but_home_next:hover {
+    width: 100%;
+    box-shadow: 10px 10px 10px;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+}

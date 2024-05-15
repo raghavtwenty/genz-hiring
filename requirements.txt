@@ -1,0 +1,9 @@
+jupyter
+openai==0.28
+flask
+python-dotenv
+serpapi
+langchai
+reportlab
+unstructured
+unstructured[pdf]

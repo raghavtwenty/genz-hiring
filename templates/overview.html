@@ -1,0 +1,53 @@
+{% extends 'home.html' %} {% block title %}Overview{% endblock %}
+
+<div class="content" id="content">
+  {% block content %}
+  <div>
+    <h1>Your Resume is {{ Appreciation }} Overall Score:{{score}}/100</h1>
+  </div>
+
+  <div class="cont">
+    <div class="container">
+      <h2>Summary</h2>
+      <ul style="list-style: none">
+        {% for point in left %}
+        <li>{{ point|replace('\n', '<br />')}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="container">
+      <h2>Modifications</h2>
+      <ul style="list-style: none">
+        {% for point in right %}
+        <li>{{ point|replace('\n', '<br />') }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="centered-container">
+    <button class="magic-button" onclick="showChangesContainer()">Magic</button>
+    <button class="magic-button" onclick="showJobSeekContainer()">
+      Job Seek
+    </button>
+  </div>
+
+  <div id="changes-container" class="container" style="display: none">
+    <h2>Your new Resume is ready</h2>
+    <ul style="list-style: none">
+      {% for point in magic %}
+      <li>{{ point|replace('\n', '<br />')}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div id="job-seeking-container" class="container" style="display: none">
+    {% for job in jobSeek %}
+    <div class="job-card-container" id="job-{{ loop.index }}">
+      <li style="list-style: none">{{ job|replace('\n', '') }}</li>
+    </div>
+    {% endfor %}
+  </div>
+  <script src="../static/javascript/script.js"></script>
+</div>
+{% endblock %}

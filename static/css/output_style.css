@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fddd6e;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #440e0d;
+}
+
+.sidebar-content {
+    padding: 20px;
+    color: white;
+}
+
+.sidetag {
+    padding: 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #e27c21;
+    color: black;
+}
+
+
+.score-text {
+    margin-right: 20px;
+}
+.h{
+    text-decoration: none;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.cont {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.container {
+    flex:auto;
+    padding: 10px;
+    max-width: calc(50% - 20px);
+    box-sizing: border-box;
+    border: none;
+    text-align: left;
+}
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 200px;
+}
+.magic-button {
+    background-color: #390809;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.job-card-container {
+    border: 1px solid #390809;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 10px;
+    background-color:#e27c21;
+}
+
+.job-card-container h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
